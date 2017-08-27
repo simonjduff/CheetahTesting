@@ -32,6 +32,12 @@ All tests start by setting up a context, and initializing the Given/When/Then ch
         {
             given.Context.AValue = value;
         }
+        
+        public static async Task AValueAsync(this IGiven<MyTestContext> given, int value)
+        {
+            given.Context.AValue = value;
+            await Task.Delay(1); // Simulating an async call
+        }
     }
     
     [Fact]
