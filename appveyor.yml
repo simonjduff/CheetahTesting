@@ -15,3 +15,6 @@ after_build:
 - dotnet pack "src\CheetahTesting" -c %CONFIGURATION% --no-dependencies --version-suffix %LABEL%
 test_script:
 - dotnet test "src/CheetahTesting.Tests" -c %CONFIGURATION%
+artifacts:
+  - path: '**\*.nupkg'
+    name: Nuget packages
