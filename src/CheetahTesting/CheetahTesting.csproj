@@ -2,6 +2,14 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard1.0</TargetFramework>
+    <Description>Fluent interface for BDD style testing</Description>
+    <PackageProjectUrl>https://github.com/simonjduff/CheetahTesting</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/simonjduff/CheetahTesting/blob/master/LICENSE</PackageLicenseUrl>
+    <Copyright>Simon J Duff</Copyright>
+    <RepositoryUrl>https://github.com/simonjduff/CheetahTesting</RepositoryUrl>
+    <RepositoryType>Github</RepositoryType>
+    <Authors>Simon J Duff</Authors>
+    <Company>Simon J Duff Ltd</Company>
   </PropertyGroup>
 
 </Project>
