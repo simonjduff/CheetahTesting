@@ -22,7 +22,7 @@ All tests start by setting up a context, and initializing the Given/When/Then ch
     [Fact]
     public async Task SimpleTest()
     {
-        await CTest.Given<MyTestContext>(g => g.Context.AValue = 5);
+        await CTest<MyTestContext>.Given(g => g.Context.AValue = 5);
     }
 
 ### Extension methods for readability and reusability
@@ -43,7 +43,7 @@ All tests start by setting up a context, and initializing the Given/When/Then ch
     [Fact]
     public async Task SimpleTest()
     {
-        await CTest.Given<MyTestContext>(g => g.AValue(5));
+        await CTest<MyTestContext>.Given(g => g.AValue(5));
     }
     
 ### Full sample
@@ -52,8 +52,8 @@ See CheetahTesting.Tests/Simple/SimpleTestExtensions for the extensions used her
     [Fact]
     public async Task SimpleTest()
     {
-        await CTest
-            .Given<TestContext>(g => g.AValue())
+        await CTest<TestContext>
+            .Given(g => g.AValue())
             .And(g => g.AnotherValue(10))
             .When(w => w.IAddTheValues())
             .And(w => w.IDivideBy(2))
@@ -67,8 +67,8 @@ Async is fully supported, using the Async versions of each definition
     [Fact]
     public async Task Test1()
     {
-        await CTest
-            .GivenAsync<TestContext>(async g => await g.AValue())
+        await CTest<TestContext>
+            .GivenAsync(async g => await g.AValue())
             .AndAsync(async g => await g.AnotherValue(10))
             .WhenAsync(async w => await w.IAddTheValues())
             .AndAsync(async w => await w.IDivideBy(2))
@@ -82,8 +82,8 @@ Given these are all just Funcs and Actions, you can use inline lambdas, sync and
     [Fact]
     public async Task Test1()
     {
-        await CTest
-            .GivenAsync<TestContext>(g => Task.FromResult(g.Context.FirstValue = 1))
+        await CTest<TestContext>
+            .GivenAsync(g => Task.FromResult(g.Context.FirstValue = 1))
             .And(g => g.Context.SecondValue = 10)
             .WhenAsync(w => Task.FromResult(w.Context.Added = w.Context.FirstValue + w.Context.SecondValue))
             .And(w => w.Context.Final = w.Context.Added / 2d)

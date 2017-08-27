@@ -8,8 +8,8 @@ namespace CheetahTesting.Tests.Simple
         [Fact]
         public async Task Test1()
         {
-            await CTest
-                .Given<TestContext>(g => g.AValue())
+            await CTest<TestContext>
+                .Given(g => g.AValue())
                 .And(g => g.AnotherValue(10))
                 .When(w => w.IAddTheValues())
                 .And(w => w.IDivideBy(2))
