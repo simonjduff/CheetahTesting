@@ -10,6 +10,8 @@
     <RepositoryType>Github</RepositoryType>
     <Authors>Simon J Duff</Authors>
     <Company>Simon J Duff Ltd</Company>
+    <title>Cheetah Testing</title>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
 </Project>
