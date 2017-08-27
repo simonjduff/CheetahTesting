@@ -7,7 +7,7 @@ namespace CheetahTesting
     {
         public static Func<T, Task> ToAsync<T>(this Action<T> action)
         {
-            return a => 
+            return a =>
             {
                 action(a);
                 return Task.FromResult(0);

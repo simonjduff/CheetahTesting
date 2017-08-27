@@ -1,6 +1,5 @@
 using System.Threading.Tasks;
 using Xunit;
-using Xunit.Abstractions;
 
 namespace CheetahTesting.Tests.Simple
 {
@@ -11,9 +10,9 @@ namespace CheetahTesting.Tests.Simple
         {
             await CTest
                 .Given<TestContext>(g => g.AValue())
-                    .And(g => g.AnotherValue(10))
+                .And(g => g.AnotherValue(10))
                 .When(w => w.IAddTheValues())
-                    .And(w => w.IDivideBy(2))
+                .And(w => w.IDivideBy(2))
                 .Then(t => t.TheAnswerIs(5.5d))
                 .ExecuteAsync();
         }

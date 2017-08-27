@@ -6,7 +6,6 @@ namespace CheetahTesting
 {
     public class Given<T> : IGiven<T> where T : new()
     {
-        public T Context {get;}
         private readonly List<Func<IContextExecutor<T>, Task>> _actions = new List<Func<IContextExecutor<T>, Task>>();
 
         internal Given(T context, Func<IGiven<T>, Task> initialAction)
@@ -14,6 +13,8 @@ namespace CheetahTesting
             Context = context;
             _actions.Add(initialAction);
         }
+
+        public T Context { get; }
 
         public Given<T> And(Action<IGiven<T>> action)
         {

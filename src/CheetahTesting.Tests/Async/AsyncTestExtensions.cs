@@ -22,10 +22,10 @@ namespace CheetahTesting.Tests.Async
             when.Context.Added = when.Context.FirstValue + when.Context.SecondValue;
             await Task.Delay(1);
         }
-        
+
         public static async Task IDivideBy(this IWhen<TestContext> when, int divisor)
         {
-            when.Context.Final = when.Context.Added / (double)divisor;
+            when.Context.Final = when.Context.Added / (double) divisor;
             await Task.Delay(1);
         }
 

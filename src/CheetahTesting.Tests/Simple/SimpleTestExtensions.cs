@@ -18,10 +18,10 @@ namespace CheetahTesting.Tests.Simple
         {
             when.Context.Added = when.Context.FirstValue + when.Context.SecondValue;
         }
-        
+
         public static void IDivideBy(this IWhen<TestContext> when, int divisor)
         {
-            when.Context.Final = when.Context.Added / (double)divisor;
+            when.Context.Final = when.Context.Added / (double) divisor;
         }
 
         public static void TheAnswerIs(this IThen<TestContext> then, double result)
