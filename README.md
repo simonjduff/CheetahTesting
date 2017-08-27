@@ -42,6 +42,7 @@ All tests start by setting up a context, and initializing the Given/When/Then ch
     
 ### Full sample
 See CheetahTesting.Tests/Simple/SimpleTestExtensions for the extensions used here.
+
     await CTest
         .Given<TestContext>(g => g.AValue())
         .And(g => g.AnotherValue(10))
