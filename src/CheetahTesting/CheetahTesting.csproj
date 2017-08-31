@@ -1,6 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <Title>Cheetah Testing</Title>
     <TargetFramework>netstandard1.0</TargetFramework>
     <Description>Fluent interface for BDD style testing</Description>
     <PackageProjectUrl>https://github.com/simonjduff/CheetahTesting</PackageProjectUrl>
@@ -10,6 +11,7 @@
     <RepositoryType>Github</RepositoryType>
     <Authors>Simon J Duff</Authors>
     <Company>Simon J Duff Ltd</Company>
+    <VersionPrefix>1.0.2</VersionPrefix>
   </PropertyGroup>
 
 </Project>
