@@ -20,6 +20,9 @@ namespace CheetahTesting
         {
             foreach (var action in _actions)
                 await action(this);
+
+            if (Context is IDisposable)
+                (Context as IDisposable).Dispose();
         }
     }
 }
