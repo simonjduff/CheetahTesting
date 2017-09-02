@@ -14,6 +14,7 @@ namespace CheetahTesting.Tests.Simple
                 .When(w => w.IAddTheValues())
                 .And(w => w.IDivideBy(2))
                 .Then(t => t.TheAnswerIs(5.5d))
+                .And(t => t.True())
                 .ExecuteAsync();
         }
     }

@@ -34,5 +34,11 @@ namespace CheetahTesting.Tests.Async
             Assert.Equal(result, then.Context.Final);
             await Task.Delay(1);
         }
+
+        public static async Task True(this IThen<TestContext> then)
+        {
+            Assert.True(true);
+            await Task.Delay(1);
+        }
     }
 }

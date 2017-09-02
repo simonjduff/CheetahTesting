@@ -28,5 +28,10 @@ namespace CheetahTesting.Tests.Simple
         {
             Assert.Equal(result, then.Context.Final);
         }
+
+        public static void True(this IThen<TestContext> then)
+        {
+            Assert.True(true);
+        }
     }
 }

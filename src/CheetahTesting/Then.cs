@@ -14,6 +14,18 @@ namespace CheetahTesting
             _actions = actions;
         }
 
+        public Then<T> AndAsync(Func<IThen<T>, Task> action)
+        {
+            _actions.Add(action);
+            return this;
+        }
+
+        public Then<T> And(Action<IThen<T>> action)
+        {
+            _actions.Add(action.ToAsync());
+            return this;
+        }
+
         public T Context { get; }
 
         public async Task ExecuteAsync()

@@ -12,6 +12,7 @@
     <Authors>Simon J Duff</Authors>
     <Company>Simon J Duff Ltd</Company>
     <VersionPrefix>1.0.2</VersionPrefix>
+    <Version>1.0.4</Version>
   </PropertyGroup>
 
 </Project>
