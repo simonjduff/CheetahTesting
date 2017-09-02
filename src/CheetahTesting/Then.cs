@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace CheetahTesting
 {
-    public class Then<T> : IContextExecutor<T>, IThen<T> where T : new()
+    public class Then<T> : IContextExecutor<T>, IThen<T>
     {
         private readonly List<Func<IContextExecutor<T>, Task>> _actions;
 

@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace CheetahTesting
 {
-    public class Given<T> : IGiven<T> where T : new()
+    public class Given<T> : IGiven<T>
     {
         private readonly List<Func<IContextExecutor<T>, Task>> _actions = new List<Func<IContextExecutor<T>, Task>>();
 

@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace CheetahTesting
 {
-    public class When<T> : IWhen<T> where T : new()
+    public class When<T> : IWhen<T>
     {
         private readonly List<Func<IContextExecutor<T>, Task>> _actions;
 
